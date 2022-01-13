@@ -44,6 +44,11 @@ function! AtsFormat()
 endfunction
 
 if g:ats_use_ctags == 1
+    "         ./tags;  search for `tags` file from current file downwards
+    "           tags;  search for `tags` file from cwd downwards
+    " $PATSHOME/tags   Use ats src tags
+    setlocal tags=./tags;,tags;,$PATSHOME/tags
+
     augroup ats
         autocmd BufWritePost *.dats,*.cats,*.sats,*.hats silent !ctags -R .
     augroup END
