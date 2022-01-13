@@ -278,8 +278,6 @@ highlight link atsTodo Todo
 
 hi def link atsCBlock Special
 
-setlocal conceallevel=1
-
 let b:current_syntax = 'ats'
 
 if main_syntax ==# 'ats'
