@@ -32,7 +32,7 @@ augroup END
 setlocal commentstring=(*\ %s\ *)
 
 " use patscc as a checker
-let g:syntastic_ats_checkers = [ 'patscc' ]
+let g:syntastic_ats_checkers = ['patsopt']
 
 " function to format our buffer
 function! AtsFormat()
